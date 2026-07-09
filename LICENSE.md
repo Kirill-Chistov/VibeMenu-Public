@@ -4,7 +4,7 @@ Copyright © 2026 Dmitrii / Kirill Chistov. All rights reserved.
 
 VibeMenu is proprietary software. This license covers the **application binary**
 distributed from this repository (for example,
-`VibeMenu-v0.2-macOS-arm64.zip`).
+`VibeMenu-v0.2-macOS-universal.zip`).
 
 ## You may
 

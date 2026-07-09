@@ -1,19 +1,36 @@
-# VibeMenu
+<p align="center"><img src="assets/vibemenu-logo.png" alt="VibeMenu logo" width="120"></p>
 
-**Native macOS menu-bar radar for Claude coding sessions, usage limits, thermal pressure, and sleep prevention.**
+<h1 align="center">VibeMenu</h1>
 
-VibeMenu lives in your menu bar and gives you an at-a-glance "radar" of your Claude
-coding activity — which sessions are running, how close you are to your usage limits,
-how hard your Mac is working, and whether it will stay awake while Claude is busy.
+<p align="center"><strong>Native macOS menu-bar radar for Claude coding sessions, usage limits, thermal pressure, and sleep prevention.</strong></p>
 
-**Current release: v0.2 beta**
+<p align="center">
+  <img src="https://img.shields.io/badge/release-v0.2-2563eb?style=flat-square" alt="Release: v0.2">
+  <img src="https://img.shields.io/badge/macOS-15%2B-2563eb?style=flat-square" alt="macOS 15+">
+  <img src="https://img.shields.io/badge/build-Universal%20Mac-8957e5?style=flat-square" alt="Universal Mac">
+  <img src="https://img.shields.io/badge/privacy-Local--only-2ea043?style=flat-square" alt="Local-only">
+  <img src="https://img.shields.io/badge/source-Private-6e7681?style=flat-square" alt="Private source">
+</p>
+
+<p align="center"><img src="assets/vibemenu-menu.png" alt="VibeMenu menu showing Claude usage limits, session status, thermal pressure, and sleep prevention" width="520"></p>
 
 ---
 
 ## Download
 
-➡️ **[VibeMenu-v0.2-macOS-universal.zip](releases/v0.2/VibeMenu-v0.2-macOS-universal.zip)**
-&nbsp;·&nbsp; [SHA-256](releases/v0.2/VibeMenu-v0.2-macOS-universal.zip.sha256)
+<p align="center">
+  <a href="https://github.com/Kirill-Chistov/VibeMenu-Public/releases/download/v0.2/VibeMenu-v0.2-macOS-universal.zip"><strong>⬇️&nbsp; Download VibeMenu v0.2 &nbsp;·&nbsp; macOS universal (.zip)</strong></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Kirill-Chistov/VibeMenu-Public/releases/download/v0.2/VibeMenu-v0.2-macOS-universal.zip.sha256">SHA-256 checksum</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Kirill-Chistov/VibeMenu-Public/releases/latest">All releases</a>
+</p>
+
+Universal Mac build — runs natively on Apple Silicon and Intel. Requires **macOS 15 (Sequoia) or later**.
+
+> **Heads up:** VibeMenu v0.2 is **not signed with an Apple Developer ID and is not notarized**, so macOS Gatekeeper warns on first launch. See [Install](#install) for the one-time approval step.
 
 Verify your download (optional):
 
@@ -21,65 +38,73 @@ Verify your download (optional):
 shasum -a 256 -c VibeMenu-v0.2-macOS-universal.zip.sha256
 ```
 
-## Install
+## What it does
 
-1. **Unzip** `VibeMenu-v0.2-macOS-universal.zip`.
-2. **Move** `VibeMenu.app` into your `/Applications` folder.
-3. **Open** it. VibeMenu runs as a menu-bar app (no Dock icon) — look for its icon
-   in the top-right of your screen.
+VibeMenu lives in your menu bar and gives you an at-a-glance **radar** of your Claude coding activity:
 
-## Requirements
+- **Which sessions are running** — a live view of your Claude coding sessions.
+- **How close you are to your limits** — 5-hour, weekly, and model-specific usage, before you hit a wall.
+- **How hard your Mac is working** — a heads-up when thermal pressure climbs.
+- **Whether it will stay awake** — keep your Mac from sleeping while Claude is busy.
 
-- **macOS 15 (Sequoia) or later**
-- **Universal Mac build** — runs natively on both Apple Silicon and Intel Macs
+No Dock icon, no window — just a tidy menu in the top-right of your screen.
 
-## Security note
+## Why use it
 
-VibeMenu v0.2 beta is **not signed with an Apple Developer ID certificate and is not
-notarized**. On first launch, macOS Gatekeeper may refuse to open it.
+If you run **Claude Code or other coding agents on macOS**, long sessions tend to raise the same questions: *Am I about to hit a usage limit? Is a session still going? Is my Mac overheating or about to sleep mid-run?*
 
-To open it anyway:
-
-1. **Right-click** (or Control-click) `VibeMenu.app` → **Open**.
-2. In the dialog that appears, click **Open** again.
-
-You only need to do this once. (If you prefer, you can also allow it from
-**System Settings → Privacy & Security** after the first blocked launch.)
-
-## Privacy
-
-VibeMenu is **local-only**:
-
-- **No telemetry.** Nothing about your usage is collected or reported.
-- **No network calls.** The app does not talk to any server or backend.
-- **No backend, no accounts, no API keys.**
-
-It reads only the local Claude-related files it needs to show session titles and, if
-you enable it, usage-limit info. Everything stays on your Mac. See
-[PRIVACY.md](PRIVACY.md) for details.
+VibeMenu answers all of that from the menu bar, so you can keep working instead of checking. It's local, quiet, and built for people who leave Claude running.
 
 ## Features
 
 - **Claude Session Radar** — see your active Claude coding sessions at a glance.
-- **Claude Usage Limits Preview** — know where you stand before you hit a wall.
-- **5-hour / weekly / model-specific limit rows** — the limits that matter, broken out.
-- **Per-limit visibility** — show or hide individual limit rows to keep the menu tidy.
+- **Claude Usage Limits Preview** — know where you stand before you run out.
+  - 5-hour, weekly, and model-specific limit rows.
+  - **Per-limit visibility** — show or hide individual rows to keep the menu tidy.
 - **Thermal pressure** — a heads-up when your Mac is running hot.
 - **Sleep prevention** — keep your Mac awake while Claude is working.
+- **Cleaner, collapsible settings** — simplified and easier to scan.
 
-## Source code
+## Privacy
 
-VibeMenu's **source code is private and proprietary.** This repository contains only
-the public download, release notes, and documentation. The app binary is provided
-under the license in [LICENSE.md](LICENSE.md); no source-code rights are granted.
+VibeMenu is **local-only**. Everything it shows is derived from local files on your Mac and displayed on your own machine.
+
+- **No telemetry** — nothing about your usage is collected or reported.
+- **No network calls** — the app never contacts a server or API.
+- **No backend** — there is no VibeMenu cloud service.
+- **No API keys, no cookies** — nothing to sign in to, nothing stored off-device.
+
+It reads only the local Claude-related files it needs to show session titles and, if you enable it, usage-limit info. The **source code remains private and proprietary**. See [PRIVACY.md](PRIVACY.md) for the full model.
+
+## Install
+
+1. **Download** [`VibeMenu-v0.2-macOS-universal.zip`](https://github.com/Kirill-Chistov/VibeMenu-Public/releases/download/v0.2/VibeMenu-v0.2-macOS-universal.zip).
+2. **Unzip** it (double-click in Finder) — you'll get **VibeMenu.app**.
+3. **Move** `VibeMenu.app` into your `/Applications` folder.
+4. **First launch** — because the app is unsigned and not notarized, macOS blocks the first open. To approve it:
+   - **Right-click** (or Control-click) `VibeMenu.app` → **Open**, then click **Open** again in the dialog, **or**
+   - open **System Settings → Privacy & Security**, scroll to the **Security** section, and click **Open Anyway**.
+   - You only need to do this once. After that VibeMenu opens normally.
+
+VibeMenu runs as a **menu-bar icon** — there is no Dock icon or app window.
+
+## Limitations
+
+- **Unsigned / not notarized.** Gatekeeper warns on first open (see [Install](#install)).
+- **Claude Usage Limits is experimental.** It's off by default and may not always match the numbers you see in Claude.
+- **Claude Desktop cache reading may break.** Usage-limit reading relies on Claude Desktop's local cache; if Claude changes its internals, this can stop working until VibeMenu is updated.
 
 ## Support
 
-Found a bug or have a request? If Issues are enabled on this repository, please open
-one here. Include your macOS version and a clear description of what you saw versus
-what you expected.
+Found a bug or have a request? Please open an issue on the
+**[VibeMenu-Public issue tracker](https://github.com/Kirill-Chistov/VibeMenu-Public/issues)**. Include your macOS version and a clear description of what you saw versus what you expected.
+
+Please don't include private data (real transcript contents, tokens, etc.) in reports.
+
+## License
+
+VibeMenu is **proprietary software**, distributed here as a **binary-only** download. The app binary is provided under the license in [LICENSE.md](LICENSE.md); no source-code rights are granted, and the source code is not included in this repository.
 
 ---
 
-© 2026 Dmitrii / Kirill Chistov. All rights reserved. VibeMenu is not affiliated with
-or endorsed by Anthropic. "Claude" is a trademark of Anthropic, PBC.
+© 2026 Dmitrii / Kirill Chistov. All rights reserved. VibeMenu is not affiliated with or endorsed by Anthropic. "Claude" is a trademark of Anthropic, PBC.
