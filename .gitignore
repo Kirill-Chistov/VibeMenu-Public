@@ -1,0 +1,50 @@
+# VibeMenu-Public — public binary/download wrapper repo.
+# This repo intentionally contains ONLY: docs, screenshots, and release binaries.
+# Never commit source code, build products, or private/local data here.
+
+# --- macOS junk ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX/
+
+# --- Editors / IDE ---
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Swift / Xcode build products (must never appear here) ---
+.build/
+.derivedData/
+DerivedData/
+*.xcodeproj/
+*.xcworkspace/
+Package.swift
+Package.resolved
+Sources/
+Tests/
+App/
+
+# --- Anything that looks like source or private data ---
+*.swift
+*.env
+.env*
+*.pem
+*.key
+*.p12
+*.mobileprovision
+secrets*
+**/Claude/Cache/**
+*desktop-snapshot*
+*.log
+
+# --- Loose app bundles / archives outside releases/ ---
+# (Release artifacts belong ONLY under releases/<version>/ and are committed explicitly.)
+/*.app
+/*.zip
+/*.dmg
