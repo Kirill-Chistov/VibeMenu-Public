@@ -11,3 +11,5 @@ All notable, user-facing changes to VibeMenu are documented here.
 - **Cleaner settings UI** — simplified, easier-to-scan settings.
 - **Session Radar improvements** — better session state and layout.
 - **Local-only privacy posture** — no telemetry, no network, no backend.
+- **Universal Mac build** — a single binary that runs natively on Apple Silicon and Intel Macs.
+- **Corrected version metadata** — the app bundle now reports `0.2` (an earlier v0.2 build mistakenly reported `0.1.1`).

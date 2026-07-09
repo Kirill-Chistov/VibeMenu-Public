@@ -12,18 +12,18 @@ how hard your Mac is working, and whether it will stay awake while Claude is bus
 
 ## Download
 
-➡️ **[VibeMenu-v0.2-macOS-arm64.zip](releases/v0.2/VibeMenu-v0.2-macOS-arm64.zip)**
-&nbsp;·&nbsp; [SHA-256](releases/v0.2/VibeMenu-v0.2-macOS-arm64.zip.sha256)
+➡️ **[VibeMenu-v0.2-macOS-universal.zip](releases/v0.2/VibeMenu-v0.2-macOS-universal.zip)**
+&nbsp;·&nbsp; [SHA-256](releases/v0.2/VibeMenu-v0.2-macOS-universal.zip.sha256)
 
 Verify your download (optional):
 
 ```sh
-shasum -a 256 -c VibeMenu-v0.2-macOS-arm64.zip.sha256
+shasum -a 256 -c VibeMenu-v0.2-macOS-universal.zip.sha256
 ```
 
 ## Install
 
-1. **Unzip** `VibeMenu-v0.2-macOS-arm64.zip`.
+1. **Unzip** `VibeMenu-v0.2-macOS-universal.zip`.
 2. **Move** `VibeMenu.app` into your `/Applications` folder.
 3. **Open** it. VibeMenu runs as a menu-bar app (no Dock icon) — look for its icon
    in the top-right of your screen.
@@ -31,7 +31,7 @@ shasum -a 256 -c VibeMenu-v0.2-macOS-arm64.zip.sha256
 ## Requirements
 
 - **macOS 15 (Sequoia) or later**
-- **Apple Silicon**
+- **Universal Mac build** — runs natively on both Apple Silicon and Intel Macs
 
 ## Security note
 
